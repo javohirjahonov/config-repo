@@ -1,0 +1,16 @@
+server:
+  port: 8888  # Standard port for Config Server
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/javohirjahonov/config-repo.git"  # URL of the Git repository
+          cloneOnStart: true  # Indicates if the repository should be cloned on startup
+          default-label: main  # The default branch of the repository
+          searchPaths: '{application}'  # Path patterns under which to search for files
+          username: javohirjahonov  # Git repository username if required
+          password: Javokhir2807  # Git repository password or token if required
